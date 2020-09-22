@@ -30,7 +30,11 @@ if(firstVariable > secondVariable) {
 
 //Task d: Write a function to multiply a*b 
 
-
+function product(a, b) {
+    return a * b
+}
+let y = product(5, 3)
+console.log(y)
 
 
 
