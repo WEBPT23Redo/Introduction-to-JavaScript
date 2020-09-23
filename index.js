@@ -162,6 +162,12 @@ console.log(toCentimeters);
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
 
 function annoyingSong(num) {
+    let annoyingNum = prompt('Enter a number between 1 and 100')
+    num = parseInt(annoyingNum);
+    console.log(num);
+    for(let i = num; i >= 1; i--){
+        console.log(num + ' bottles of soda on the wall , ' + num + ' bottles of soda, take one down pass it around', num + ' bottles of soda on the wall')
+    }
     return num - 1
   }
   annoyingSong(9);
