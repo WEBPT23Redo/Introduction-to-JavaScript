@@ -161,8 +161,11 @@ console.log(toCentimeters);
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
 
-
-
+function annoyingSong(num) {
+    return num - 1
+    console.log("'+ annoyingSong +'bottles of soda on the wall");
+  }
+  annoyingSong(9);
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -174,7 +177,20 @@ console.log(toCentimeters);
 //60s should be D 
 //and anything below 60 should be F
 
-
+function grades(percent){
+    if(percent > 89){
+        return("A");
+    } else if(percent > 79){
+        return("B");
+    } else if(percent > 69){
+        return("C");
+    } else if(percent > 59){
+        return("D");
+    } else {
+        return("F");
+    }
+} 
+console.log(grades(65))
 
 
 
