@@ -42,7 +42,13 @@ console.log(y)
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+let age = 36;
+let dogYearMultiplyer = 7;
 
+function dogYears(age, dogYearMultiplyer) {
+    return age * dogYearMultiplyer
+}
+console.log(dogYears(age, dogYearMultiplyer))
 
 
 
