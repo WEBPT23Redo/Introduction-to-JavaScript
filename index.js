@@ -70,27 +70,27 @@ console.log(dogYears(age, dogYearMultiplyer))
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
 
-function dogFeeder(age, weight){
-    if(age >=1){
-        if(weight < 6){
-            return(weight *.05)
-        } else if(weight < 11){
-            return(weight *.04)
-        } else if(weight < 16){
-            return(weight *.03)
+function dogFeeder(age, weight) {
+    if (age >= 1) {
+        if (weight < 6) {
+            return (weight * .05)
+        } else if (weight < 11) {
+            return (weight * .04)
+        } else if (weight < 16) {
+            return (weight * .03)
         } else {
-            return(weight * .02)
+            return (weight * .02)
         }
     } else {
-        if(age < .4){
-            return(weight * .1)
-        } else if(age < .6){
-            return(weight * .05)
+        if (age < .4) {
+            return (weight * .1)
+        } else if (age < .6) {
+            return (weight * .05)
         } else {
-            return(weight * .04)
+            return (weight * .04)
         }
     }
-}  
+}
 console.log(dogFeeder(1, 15))
 
 /************************************************************** Task 4 **************************************************************/
@@ -100,39 +100,39 @@ console.log(dogFeeder(1, 15))
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-function rps(player){
+function rps(player) {
     player = player.toUpperCase();
     computerResult = ""
     let computer = Math.floor(Math.random() * 3);
 
-    if(computer === 0){
+    if (computer === 0) {
         computerResult = "ROCK";
-    } else if(computer === 1){
+    } else if (computer === 1) {
         computerResult = "PAPER";
-    } else if(computer === 2){
+    } else if (computer === 2) {
         computerResult = "SCISSORS";
     }
     console.log(computerResult)
-    if(player === computerResult){
-        return("TIE");
+    if (player === computerResult) {
+        return ("TIE");
     } else {
-        if(computerResult === "ROCK"){
-            if(player === "PAPER"){
-                return("WIN");
+        if (computerResult === "ROCK") {
+            if (player === "PAPER") {
+                return ("WIN");
             } else {
-                return("LOSE");
+                return ("LOSE");
             }
-        } else if(computerResult === "PAPER"){
-            if(player === "SCISSORS"){
+        } else if (computerResult === "PAPER") {
+            if (player === "SCISSORS") {
                 return ("WIN");
             } else {
                 return ("LOSE")
             }
         } else {
-            if(player === "ROCK"){
-                return("WIN");
+            if (player === "ROCK") {
+                return ("WIN");
             } else {
-                return("LOSE")
+                return ("LOSE")
             }
         }
     }
@@ -161,16 +161,13 @@ console.log(toCentimeters);
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
 
-function annoyingSong(num) {
-    let startingNum = prompt('Enter a number between 1 and 100')
-    num = parseInt(startingNum);
-    console.log(num);
-    for(let i = num; i >= 1; i--){
-        console.log(num + ' bottles of soda on the wall , ' + num + ' bottles of soda, take one down pass it around', num + ' bottles of soda on the wall')
+function annoyingSong(bottles) {
+        for (var i = bottles; i > 0; i--) {
+        console.log(i + " bottles of soda on the wall, " + i + " bottles of soda, take one down, pass it around, " + (i - 1) + " bottles of soda on the wall.")
     }
-    return num - 1
-  }
-  annoyingSong(9);
+}
+
+console.log(annoyingSong(5))
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -182,19 +179,19 @@ function annoyingSong(num) {
 //60s should be D 
 //and anything below 60 should be F
 
-function grades(percent){
-    if(percent > 89){
-        return("A");
-    } else if(percent > 79){
-        return("B");
-    } else if(percent > 69){
-        return("C");
-    } else if(percent > 59){
-        return("D");
+function grades(percent) {
+    if (percent > 89) {
+        return ("A");
+    } else if (percent > 79) {
+        return ("B");
+    } else if (percent > 69) {
+        return ("C");
+    } else if (percent > 59) {
+        return ("D");
     } else {
-        return("F");
+        return ("F");
     }
-} 
+}
 console.log(grades(65))
 
 
