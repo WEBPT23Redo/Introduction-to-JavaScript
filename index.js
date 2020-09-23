@@ -163,7 +163,6 @@ console.log(toCentimeters);
 
 function annoyingSong(num) {
     return num - 1
-    console.log("'+ annoyingSong +'bottles of soda on the wall");
   }
   annoyingSong(9);
 
