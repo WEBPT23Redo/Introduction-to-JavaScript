@@ -70,31 +70,28 @@ console.log(dogYears(age, dogYearMultiplyer))
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
 
-function dogFeeder(age, weight) {
-    if (age >= 1) {
-        if (weight * 0.05)
+function dogFeeder(age, weight){
+    if(age >=1){
+        if(weight < 6){
+            return(weight *.05)
+        } else if(weight < 11){
+            return(weight *.04)
+        } else if(weight < 16){
+            return(weight *.03)
+        } else {
+            return(weight * .02)
+        }
+    } else {
+        if(age < .4){
+            return(weight * .1)
+        } else if(age < .6){
+            return(weight * .05)
+        } else {
+            return(weight * .04)
+        }
     }
-    if (weight <= 10) {
-        return weight * 0.04
-    }
-    if (weight <= 15) {
-        return weight * 0.02
-    }
-    // for an adult dog
-} else {
-    if (age >= 2 && age <= 4) {
-        return weight * 0.1
-    }
-    if (age > 4 && age <= 7) {
-        return weight * 0.05
-    }
-    if (age > 7 && age < 12) {
-        return weight * 0.04
-    }
-    // for a puppy
-}
-console.log(dogFeeder(15, 1))
-
+}  
+console.log(dogFeeder(1, 15))
 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
@@ -103,22 +100,59 @@ console.log(dogFeeder(15, 1))
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
+function rps(player){
+    player = player.toUpperCase();
+    computerResult = ""
+    let computer = Math.floor(Math.random() * 3);
 
-function rps(playerChoice, computerChoice){
-    
+    if(computer === 0){
+        computerResult = "ROCK";
+    } else if(computer === 1){
+        computerResult = "PAPER";
+    } else if(computer === 2){
+        computerResult = "SCISSORS";
+    }
+    console.log(computerResult)
+    if(player === computerResult){
+        return("TIE");
+    } else {
+        if(computerResult === "ROCK"){
+            if(player === "PAPER"){
+                return("WIN");
+            } else {
+                return("LOSE");
+            }
+        } else if(computerResult === "PAPER"){
+            if(player === "SCISSORS"){
+                return ("WIN");
+            } else {
+                return ("LOSE")
+            }
+        } else {
+            if(player === "ROCK"){
+                return("WIN");
+            } else {
+                return("LOSE")
+            }
+        }
+    }
 }
-
+console.log(rps("ROCK"))
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
-
+let km = 500;
+const toMiles = km * 0.62;
+console.log(toMiles);
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
 
-
+let feet = 10;
+const toCentimeters = feet * 30.48;
+console.log(toCentimeters);
 
 
 
